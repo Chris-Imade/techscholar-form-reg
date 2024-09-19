@@ -1,0 +1,30 @@
+{
+  "name": "form-registration",
+  "version": "1.0.0",
+  "description": "Form collection infrastructure for Techscholar Conference",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Chris-Imade/techscholar-form-reg.git"
+  },
+  "keywords": [
+    "Form",
+    "Registration"
+  ],
+  "author": "Chris-Imade",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chris-Imade/techscholar-form-reg/issues"
+  },
+  "homepage": "https://github.com/Chris-Imade/techscholar-form-reg#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "mongoose": "^8.6.3",
+    "nodemon": "^3.1.6"
+  }
+}
