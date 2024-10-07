@@ -15,7 +15,7 @@ const RecordSchema = mongoose.Schema({
   performance_tracking_mode: String,
   indicated_performance_tracking_mode: String,
   specific_features: [String],
-  interested_learning_area: String,
+  interested_learning_area: [String],
   indicated_interest: String,
   preferred_meeting_arena: String,
   interested_in_demo: String,
