@@ -6,8 +6,7 @@ require("dotenv").config();
 
 // Create a transporter with your email service configuration
 const transporter = nodemailer.createTransport({
-  service: "gmail",
-  host: "smtp.gmail.com",
+  host: "smtp.hostinger.com",
   port: 465,
   secure: true,
   auth: {
@@ -24,20 +23,17 @@ const addRecord = async (req, res) => {
     const savedRecord = await newRecord.save();
 
     // Send email using Nodemailer
-    const info = await transporter.sendMail({
+    await transporter.sendMail({
       from: process.env.email,
       to: recordBody.email,
       subject: "SAC Registration",
       html: emailBody,
     });
 
-    console.log("Email sent:", info.messageId);
-
     res.status(201).json({
       message: "Record added successfully",
       data: savedRecord,
     });
-
   } catch (error) {
     res.status(500).json({
       message: "Error adding record",
