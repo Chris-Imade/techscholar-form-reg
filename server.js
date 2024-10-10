@@ -2,8 +2,12 @@ const express = require("express");
 const cors = require("cors");
 const recordRoute = require("./routes/record");
 const dbConnection = require("./db").connection;
+const trackVisit = require("./middleware/visitRecord");
+
 
 const app = express();
+
+app.use(trackVisit);
 
 const PORT = 3233;
 
